@@ -1,0 +1,16 @@
+To initialize a Music object:
+
+buzzer1 = Music(BPM, Volume, GPIO Pin number)
+-BPM is just beats per minute
+-Volume is a 16 bit integer between 0 and 65535 that corresponds to the voltage entering the buzzer
+-The pin number is the GPIO pin listed on the device being used
+
+To add a rest:
+
+buzzer1.rest(number of beats)
+-the time a beat takes is measured by the BPM value given at initialization
+
+To add a note:
+
+buzzer1.d0(number of beats)
+-The format of notes is as follows: the lowercase letter of the note (ex: a, d, e), an "s" if the note is sharp (there are no flats in this library), and the octave the note is in (beginning at 0 and ending at 8)
