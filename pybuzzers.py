@@ -4,7 +4,7 @@ class Music:
     def __init__(self, bpm=0, vol=0, pin=0):  #at initialization, enter the BPM for the song, the volume the buzzer should be at, and the GPIO pin number
         self.t = 60/bpm
         self.v = vol
-        self.pin = machine.PWM(machine.Pin(corr))
+        self.pin = machine.PWM(machine.Pin(pin))
         self.pin.duty_u16(self.v)
     def rest(self, beats):  #the rest of the commands just need a value for how long a note should be held
         self.pin.duty_u16(0)
